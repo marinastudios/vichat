@@ -1,15 +1,25 @@
 {
   "name": "vichat",
-  "version": "1.0.0",
-  "description": "The chat app that mimics the style of the vim editor.",
+  "version": "0.0.1",
+  "description": "The chat app that mimics the style of the vi(m) editor.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "",
+    "build": "tsc -c && rollup -c && pkg ./bin/package.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.3.1"
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@types/node": "^20.3.1",
+    "pkg": "^5.8.1",
+    "rollup": "^3.25.2",
+    "tslib": "^2.5.3",
+    "typescript": "^5.2.0-dev.20230623"
   },
-  "exports": "./out/export.js"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinastudios/vichat.git"
+  }
 }
